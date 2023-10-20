@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<style type="text/css">
+	#eyes{
+		width:100px;
+		height:100px;
+		background-color:green;
+		position:relative;
+		top:300px;
+		transition:4s;
+		background-size:150px;
+		border:10px solid black;
+	}
+	#back{
+			width:50px;
+			height:25px;
+			background-image:url(arrow.png);
+			background:contain;
+			background-size:50px;
+		}
+		body{
+			background-color:black;
+		}
+</style>	
+</head>
+<body>
+<a href="projects.html">
+<div id="back">
+</div>
+</a>
+<center>
+	<div id="eyes"></div>
+</center>
+
+<script type="text/javascript">
+	eyes.addEventListener("click", 
+		function(){
+		eyes.style.top="0px";
+		eyes.style.width="100%";
+		eyes.style.height="1000px";
+		eyes.style.backgroundImage="url(eyes.gif)";
+		console.log("Boo!")
+
+
+		})
+
+</script>
+</body>
+</html>
