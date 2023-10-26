@@ -9,7 +9,7 @@
 		background-color:green;
 		position:relative;
 		top:300px;
-		transition:4s;
+		transition:10s;
 		background-size:150px;
 		border:10px solid black;
 	}
@@ -26,12 +26,14 @@
 </style>	
 </head>
 <body>
+	<audio id="sound" src="horror.mp3"></audio>
 <a href="projects.html">
 <div id="back">
 </div>
 </a>
 <center>
-	<div id="eyes"></div>
+	<div id="eyes">
+	</div>
 </center>
 
 <script type="text/javascript">
@@ -42,6 +44,7 @@
 		eyes.style.height="1000px";
 		eyes.style.backgroundImage="url(eyes.gif)";
 		console.log("Boo!")
+		sound.play()
 
 
 		})
