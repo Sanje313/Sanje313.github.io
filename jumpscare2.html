@@ -8,7 +8,9 @@
 		height:100px;
 		position:relative;
 		transition:4s;
+		top:310px;
 		background-image:url(https://static.wikia.nocookie.net/omniversal-battlefield/images/8/87/Jason_Voorhees_Friday_the_13th.png/revision/latest/scale-to-width-down/381?cb=20180820001237);
+		background-repeat:no-repeat;
 	}	
 	body{
 		background-image:url('https://i.pinimg.com/736x/f4/ed/81/f4ed818d776f1aaf9b0902d64c50a415.jpg');
@@ -21,9 +23,22 @@
 <body>
 	<audio id="hehe" src="hahalaugh.mp3"></audio>
 <center>
-	<div id="spookiest">
-		
+	<div id="spookiest">	
 	</div>
 </center>
+	<script type="text/javascript">
+	spookiest.addEventListener("click", 
+		function(){
+		spookiest.style.top="0px";
+		spookiest.style.width="100%";
+		spookiest.style.height="1000px";
+		spookiest.style.backgroundImage="url(spook man.jpeg)";
+		console.log("Boo!")
+		horror.hehe()
+
+
+		})
+
+</script>
 </body>
 </html>
