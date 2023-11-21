@@ -56,6 +56,15 @@
 					transform:rotate(360deg);
 				}
 			}
+			#proj5{
+				width:100px;
+				height:100px;
+				background-image:url(AvaBackground.jpg);
+				border:5px solid black;
+				font-size:25px;	
+				background:contain;
+				background-size:100px 100px;
+			}
 
 	body{
 			background-color:skyblue;
@@ -63,7 +72,7 @@
 		</style>
 </head>
 <body>
-
+ <audio id="ding" src="done.mp3"></audio>
 	<a href="index.html">
 	<div id="back">
 	</div>
@@ -88,6 +97,11 @@
 		Brownies
 	</div>
 	</a>
+	<a href="present.html">
+	<div id="proj5">
+		Happy Birthday!
+	</div>
+	</a>
 <script type="text/javascript">
 	function brownie (){
 		proj4.style.width="100px";
@@ -95,6 +109,7 @@
 		proj4.style.backgroundSize="contain";
 		proj4.style.backgroundImage="url(https://www.mashed.com/img/gallery/why-tiktok-is-grossed-out-by-a-food-network-brownie-recipe/l-intro-1650496307.jpg)";
 		proj4.style.display="inline-block";
+		ding.play()
 	}
 	setInterval(brownie, 2000)
 </script>
