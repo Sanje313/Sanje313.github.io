@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <center>
+    	<button id="bomb" style="background-color:darkred; height:100px; width:100px;" >WARNING: DONT PRESS
+    	</button>
+    </center>
+</head>
+
+<body>
+    <audio id="bang" src="bakoom.mp3"></audio>
+    <script type="text/javascript">
+        bomb.addEventListener("click", function () {
+            document.body.style.backgroundImage='url("kaboom.gif")';
+            document.body.style.backgroundRepeat='no-repeat'
+            document.body.style.backgroundSize = 'cover'; //line from chatgpt//
+            document.body.style.backgroundAttachment = 'fixed'; //line from chatgpt//
+            bang.play();
+             setTimeout(function () {
+                window.location.href = 'projects.html'; 
+            }, 2000); //line from chatgpt//
+        });
+    </script>
+</body>
+
+</html>

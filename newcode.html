@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.topping{
+			height:100px;
+			width:100px;
+			display:inline-block;
+			position:relative;
+			background-size:contain;
+			background-repeat:no-repeat;
+		}
+
+		#icecream{
+			height:500px;
+			width:500px;
+			background-image:url(https://shelfcooking.com/wp-content/uploads/2020/06/Easy-Homemade-Ice-Cream.jpg);
+			background-size:contain;
+			background-repeat:no-repeat;
+		
+		}
+		#sprinkles{
+			background-image:url(sprinkles.png);
+		}
+		#chocolate{
+			background-image:url(chips.png);
+		}
+		#caramel{
+			background-image:url(drizzle.png);
+		}
+		#cherry{
+			background-image:url(cherry.png);
+		}
+
+	</style>
+</head>
+<body>
+
+<div id="sprinkles" class="topping"></div>
+<div id="chocolate" class="topping"></div>
+<div id="caramel" class="topping"></div>
+<div id="cherry" class="topping"></div>
+
+<div id="icecream"></div>
+
+<script type="text/javascript">
+	
+	var thing;
+
+	sprinkles.addEventListener("click", function(){
+		thing = "sprinkles.png"
+		console.log(thing)
+	})
+	chocolate.addEventListener("click", function(){
+		thing = "chips.png"
+		console.log(thing)
+	})
+	caramel.addEventListener("click", function(){
+		thing = "drizzle.png"
+		console.log(thing)
+	})
+	cherry.addEventListener("click", function(){
+		thing = "cherry.png"
+		console.log(thing)
+	})
+
+icecream.addEventListener("click",
+	function makeDiv (event){
+		var toppingplace = document.createElement('div');
+		document.body.appendChild(toppingplace)
+		toppingplace.classList.add('topping')
+		toppingplace.style.position = "absolute"
+		toppingplace.style.left = event.clientX-50 +"px"
+		toppingplace.style.top = event.clientY-50 +"px"
+		toppingplace.style.border = "0px"
+		toppingplace.style.backgroundImage = "url(" + thing +")"
+	})
+</script>
+</body>
+</html>
