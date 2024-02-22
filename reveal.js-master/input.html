@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	
+	body{
+		background-color: #a48cba;
+	}
+
+</style>
+</head>
+<body>
+Who has the best earlobes?
+<input type="text" id="enter" placeholder="Who's earlobes?">
+</input>
+<button id="button">
+Submit	
+</button>
+<div id="answer"></div>
+<script type="text/javascript">
+	button.addEventListener("click", function(){
+		console.log(enter.value)
+		if(enter.value == "Amir"){
+			answer.innerText = "Absolutely! You are 100 percent correct."
+		}
+		else{
+			answer.innerText = "Yeah, I guess. Your're " + Math.floor(Math.random()*100) + " percent correct."
+		}
+	})
+</script>
+</body>
+
+</html>

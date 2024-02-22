@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+font-size:50px;
+
+		}
+
+	</style>
+</head>
+<body>
+
+<script type="text/javascript">
+	var x;
+	var y;
+	var z;
+
+	document.addEventListener("click",function(){
+		var x = Math.floor(Math.random()*255);
+		var y = Math.floor(Math.random()*255);
+		var z = Math.floor(Math.random()*255);
+		document.body.style.backgroundColor="rgb(" + x + "," + y + "," + z + ")";
+		document.body.innerText = "rgb(" + x + "," + y + "," + z + ")";
+		document.body.width = x + "px"
+		document.body.height = y + "px"
+	})
+
+</script>
+
+</body>
+</html>

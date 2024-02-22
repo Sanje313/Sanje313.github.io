@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        #coche {
+            height:70px;
+            width:70px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            left: 0px;
+            position: relative;
+            top: 0px;
+        }
+        #backdrop{
+        	height:2700px;
+        	width:130%;
+        	background-image:url(racetrack.png);
+        	background-repeat:no-repeat;
+        	background-size:contain;
+
+        }
+    </style>
+</head>
+<body>
+
+<div id="coche"></div>
+<center>
+<div id="backdrop"></div>
+</center>
+
+<script type="text/javascript">
+    var left = 0;
+    var size = 0;
+    var keyDown = {d: false, a: false, s: false, w: false};
+
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "d" || event.key === "a" || event.key === "z" || event.key === "c") {
+            keyDown[event.key] = true;
+            moveCar(event.key);
+        }
+        if (event.key === "s" || event.key === "w") {
+            keyDown[event.key] = true;
+            resizeCar(event.key);
+        }
+    });
+
+    document.addEventListener("keyup", function(event) {
+        if (event.key === "d" || event.key === "a" || event.key === "s" || event.key === "w") {
+            keyDown[event.key] = false;
+        }
+    });
+
+    function moveCar(direction) {
+        if (keyDown[direction]) {
+            if (direction === "d") {
+                left += 3;
+                coche.style.left = left + "px";
+                coche.style.backgroundImage = "url(kart3.png)";
+            } else if (direction === "a") {
+                left -= 3;
+                coche.style.left = left + "px";
+                coche.style.backgroundImage = "url(kart4.png)";
+            }
+            requestAnimationFrame(() => moveCar(direction));
+        }
+}
+    function resizeCar(direction) {
+        if (keyDown[direction]) {
+            size = (direction === "s") ? size + 3 : size - 3;
+            coche.style.top = size + "px";
+            coche.style.backgroundImage = (direction === "s") ? "url(kart2.png)" : "url(kart.png)";
+            requestAnimationFrame(() => resizeCar(direction));
+        }
+    }
+</script>
+</body>
+</html>a

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+
+	
+	#cons0le {
+		width:250px;
+		height:200px;
+		position: relative;
+		background-size:contain;
+		top:17%;
+		left:2%;
+		background-image:url(consolename);
+	}
+
+	#consolename{
+		width:300px;
+		height:100px;
+		position:relative;
+		top:40%;
+		left:300px;
+		font-size: 60px;
+	}
+	</style>
+</head>
+<body>
+    <div id="consolename"></div>
+    <div id="cons0le"></div>
+	<p>What is the best new gen conslole?</p>
+	<p id=text></p>
+
+<script type="text/javascript">
+	
+	var videogame = ["xbox.jpeg","ps5.jpeg","pc.jpeg","nintendo switch.jpeg", "vr.jpeg"]
+	var name = ["xbox" , "ps5" , "pc" , "nintendo switch" , "vr"]
+
+	var x = Math.round(Math.random()*4);
+
+	text.innerText = "You think the best new gen console is the " + name[x]
+	
+</script>
+</body>
+</html>
