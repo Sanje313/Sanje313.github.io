@@ -1,53 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-<center>
-<h1>Projects</h1>
-</center>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 	<style type="text/css">
+		h1{
+			font-size:100px;
+			font-family:'Oswald', sans-serif;
+		}
 		#back{
 			width:50px;
 			height:50px;
 			background-image:url(https://cdn.iconscout.com/icon/free/png-256/free-back-arrow-1767523-1502427.png);
 			background:contain;
+			position:relative;
 			background-size:50px;
+			background-repeat:no-repeat;
+			margin:50px;
 		}
-		</style>
-		<style>
+		.box{
+			display:inline-block;
+			position:relative;
+			width:300px;
+			height:300px;
+			margin:62px;
+			position:relative;
+			background-size:contain;
+			background-repeat:no-repeat;
+			border: 5px solid #555;
+			top:60px;
+		}
+		.text{
+			width:100%;
+			font-family:'Oswald', sans-serif;
+			top:105%;
+			height:20px;
+			text-align:center;
+			font-size:30px;
+			text-decoration: none;
+			color:black;
+		}
 			#proj1{
-				width:100px;
-				height:100px;
 				background-color:darkred;
 				border:5px solid black;
-				font-size:25px;
 			}
 			#proj2{
-				width:100px;
-				height:100px;
 				background-color:orangered;
 				border:5px solid black;
-				font-size:25px;
 				animation-name:move;
 				animation-iteration-count: infinite;
 				animation-duration:3s;
 			}
 			#proj3{
-				width:100px;
-				height:100px;
 				background-image:url(birb.gif);
 				border:5px solid black;
-				font-size:25px;	
 				background:contain;
-				background-size:100px 100px;
 			}
 			#proj4{
-			width:100px;
-				height:100px;
 				background-color:sandybrown;
 				border:5px solid black;
-				font-size:25px;	
 				background:contain;
-				background-size:100px 100px;
 				transition:5s;	
 			}
 			@keyframes move{
@@ -59,33 +72,65 @@
 				}
 			}
 			#proj5{
-				width:100px;
-				height:100px;
 				background-image:url(Ava5.jpg);
 				border:5px solid black;
-				font-size:25px;	
 				background:contain;
-				background-size:100px 100px;
 			}
 			#proj6{
-			width:100px;
-				height:100px;
 				background-color:black;
 				border:5px solid black;
-				font-size:25px;	
 				background:contain;
-				background-size:100px 100px;
 				background-image:url(bomb.gif);	
 			}
 			#proj7{
-				width:100px;
-				height:100px;
 				background-color:paleturquoise;
 				border:5px solid black;
-				font-size:25px;	
 				background:contain;
-				background-size:100px 100px;
 				background-image:url(https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/KUFWIPXROII6ZLAWR67XDFGNPA.jpg&w=1100);	
+			}
+			#proj8{
+				background-image:url(Ear.gif);
+				background-color:limegreen;
+			}
+			#proj9{
+				animation-name:color;
+				animation-iteration-count:infinite;
+				animation-duration:15s;
+			}
+			@keyframes color{
+				10%{
+					background-color:darkred;
+				}
+				20%{
+					background-color:orange;
+				}
+				30%{
+					background-color:yellow;
+				}
+				40%{
+					background-color:green;
+				}
+				50%{
+					background-color:skyblue;
+				}
+				60%{
+					background-color:purple;
+				}
+				70%{
+					background-color:pink;
+				}
+				80%{
+					background-color:black;
+				}
+				90%{
+					background-color:white;
+				}
+				100%{
+
+				}
+			}
+			#proj10{
+				background-image:url(vrooooom.gif);
 			}
 	body{
 			background-color:skyblue;
@@ -93,44 +138,62 @@
 		</style>
 </head>
 <body>
+<center>
+	<h1>Projects</h1>
+</center>
  <audio id="ding" src="done.mp3"></audio>
 	<a href="index.html">
 	<div id="back">
 	</div>
 	</a>
 	<a href="code.html">
-	<div id="proj1">
-		Angry Bird Boxes
+	<div id="proj1" class="box">
+		<div class="text">Angry birds boxes</div>
 	</div>	
 	</a>
 	<a href="animation.html">
-	<div id="proj2">	
-		Terence moves!!!
+	<div id="proj2" class="box">	
+		<div class="text">Terrence moves!!!</div>
 	</div>
 	</a>
 	<a href="jumpscare.html">
-	<div id="proj3">
-		Boo!
+	<div id="proj3" class="box">
+		<div class="text">Boo!</div>
 	</div>
 	</a>
 	<a href="desert.html">
-	<div id="proj4">	
-		Brownies
+	<div id="proj4" class="box">	
+		<div class="text">Brownies</div>
 	</div>
 	</a>
 	<a href="present.html">
-	<div id="proj5">
-		Happy Birthday!
+	<div id="proj5" class="box">
+		<div class="text">Happy Birthday</div>
 	</div>
 	</a>
 	<a href="boom.html">
-	<div id="proj6">
-		Father of Atomic Bomb.
+	<div id="proj6" class="box">
+		<div class="text">Father of the atomic bomb</div>
 	</div>
 	</a>
 	<a href="newcode.html">
-		<div id ="proj7" class="">
-		Ice Cream
+		<div id ="proj7" class="box">
+		<div class="text">Ice Cream</div>
+		</div>
+	</a>
+	<a href="input.html">
+		<div id="proj8" class="box">
+		<div class="text">Ear</div>	
+		</div>
+	</a>
+	<a href="color.html">
+		<div id="proj9" class="box">
+		<div class="text">Colors</div>	
+		</div>
+	</a>
+	<a href="coche.html">
+		<div id="proj10" class="box">
+		<div class="text">Vroom vroom</div>	
 		</div>
 	</a>
 <script type="text/javascript">
